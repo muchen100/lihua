@@ -30,13 +30,9 @@ h4::before, h5::before, h6::before {
 
 /* 基础分割线美化 */
 hr {
-  border: none;                   /* 移除默认边框 */
-  height: 2px;                    /* 设置高度 */
-  margin: 2em 0;                  /* 调整外边距 */
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #ff6b6b,
-    transparent
-  );                              /* 渐变色效果 */
+  border: none !important;
+  height: 2px !important;
+  margin: 2em 0 !important;
+  background: linear-gradient(90deg, transparent, #ff6b6b, transparent) !important;
+  opacity: 1 !important; /* 防止被透明度覆盖 */
 }

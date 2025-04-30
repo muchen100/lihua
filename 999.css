@@ -28,21 +28,15 @@ h4::before, h5::before, h6::before {
   h6::before { width: 2px; }
 }
 
-/* 覆盖所有 <hr> 并添加渐变效果 */
+/* 基础分割线美化 */
 hr {
-  height: 2px;
-  border: none;
-  background: linear-gradient(to right, 
-    transparent, 
-    #726ceb, 
-    #fd669a, 
+  border: none;                   /* 移除默认边框 */
+  height: 2px;                    /* 设置高度 */
+  margin: 2em 0;                  /* 调整外边距 */
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff6b6b,
     transparent
-  ) !important;
-  margin: 1.5em 0 !important;
-  opacity: 0.8;
-}
-
-/* 可选：为原生 *** 生成的 <hr> 添加特殊标记 */
-hr:has(+ :not(hr)) {
-  box-shadow: 0 0 10px rgba(114, 108, 235, 0.3);
+  );                              /* 渐变色效果 */
 }

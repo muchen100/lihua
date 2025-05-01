@@ -1,6 +1,6 @@
 /* heading-style.css */
 /* 核心等高控制 */
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   line-height: 1 !important;    /* 强制覆盖行高 */
@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 竖线定义（严格等高） */
-h1::before, h2::before, h3::before,
+h2::before, h3::before,
 h4::before, h5::before, h6::before {
   content: "";
   display: inline-block;

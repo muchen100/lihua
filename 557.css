@@ -1,0 +1,72 @@
+/* heading-style.css */
+/* 核心等高控制 */
+h2, h3, h4, h5, h6 {
+  display: flex;
+  align-items: center;
+  line-height: 1 !important;    /* 强制覆盖行高 */
+  color: #6c6cee;
+  margin: 0.5em 0;              /* 保留默认间距 */
+}
+
+/* 竖线定义（严格等高） */
+h2::before, h3::before,
+h4::before, h5::before, h6::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1em;
+  min-height: 1em;              /* 防止压缩 */
+  background: linear-gradient(to bottom, #726ceb, #fd669a);
+  margin-right: 8px;
+  border-radius: 2px;
+  flex-shrink: 0;               /* 禁止缩放 */
+}
+
+/* 响应式调整（移动端） */
+@media (max-width: 768px) {
+  h1::before { width: 3px; }
+  h6::before { width: 2px; }
+}
+
+/* 基础分割线美化 */
+hr {
+  border: none !important;
+  height: 2px !important;
+  margin: 2em 0 !important;
+  background: linear-gradient(90deg, transparent, #ff6b6b, transparent) !important;
+  opacity: 1 !important; /* 防止被透明度覆盖 */
+}
+
+/* 有序 强制覆盖所有样式 */
+ol {
+  list-style: none !important;
+  padding-left: 2em !important;
+}
+ol li {
+  position: relative !important;
+  margin-bottom: 0.6em !important;
+}
+ol li::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -1.8em !important;
+  top: 0.75em !important;
+  width: 0.7em !important;
+  height: 0.7em !important;
+  border: 2px solid #22c994 !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+}
+
+/* 引用块美化 - 青绿竖线+无斜体+自然阴影 */
+blockquote {
+  border-left: 4px solid #22c994 !important; /* 青绿色竖线 */
+  padding: 12px 20px 12px 20px;    /* 优化内边距 */
+  margin: 1em 0;
+  background: #f8fafc;             /* 浅灰背景 */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* 自然阴影 */
+  border-radius: 0 4px 4px 0;      /* 右端圆角 */
+  font-style: normal !important;   /* 强制取消斜体 */
+  color: #333;                     /* 深灰文字 */
+  position: relative;
+}

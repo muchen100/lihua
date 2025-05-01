@@ -70,3 +70,14 @@ blockquote {
   color: #333;                     /* 深灰文字 */
   position: relative;
 }
+
+  /* 选择器更具体，避免被覆盖 */
+  p code.inline-code {
+    display: inline;
+    padding: 0.2em 0.4em;
+    font-family: monospace;
+    font-size: inherit; /* 继承父级大小 */
+    color: #52a7ff;
+    background-color: #e8f3ff;
+    border-radius: 4px;
+  }

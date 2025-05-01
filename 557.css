@@ -71,13 +71,12 @@ blockquote {
   position: relative;
 }
 
-  /* 选择器更具体，避免被覆盖 */
-  p code.inline-code {
+  /* 覆盖所有由反引号生成的 <code> 标签 */
+  :not(pre) > code {
     display: inline;
     padding: 0.2em 0.4em;
     font-family: monospace;
-    font-size: inherit; /* 继承父级大小 */
-    color: #52a7ff;
-    background-color: #e8f3ff;
+    color: #52a7ff !important;
+    background-color: #e8f3ff !important;
     border-radius: 4px;
   }

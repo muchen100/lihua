@@ -86,3 +86,16 @@ ul li::before {
   border-radius: 50% !important;
   background: transparent !important;
 }
+
+/* 引用块美化 - 青绿竖线+无斜体+自然阴影 */
+blockquote {
+  border-left: 4px solid #22c994 !important; /* 青绿色竖线 */
+  padding: 12px 20px 12px 20px;    /* 优化内边距 */
+  margin: 1em 0;
+  background: #f8fafc;             /* 浅灰背景 */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* 自然阴影 */
+  border-radius: 0 4px 4px 0;      /* 右端圆角 */
+  font-style: normal !important;   /* 强制取消斜体 */
+  color: #333;                     /* 深灰文字 */
+  position: relative;
+}

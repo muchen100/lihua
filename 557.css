@@ -40,7 +40,7 @@ hr {
 /* 有序 强制覆盖所有样式 */
 ol {
   list-style: none !important;
-  padding-left: calc(var(--spacing) + var(--size)); 
+  padding-left: 
 }
 ol li {
   position: relative !important;

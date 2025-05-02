@@ -49,7 +49,7 @@ ol li {
 ol li::before {
   content: "" !important;
   position: absolute !important;
-  left: -1.8em !important;
+  left: -0.8em !important;
   top: 0.75em !important;
   width: 0.7em !important;
   height: 0.7em !important;

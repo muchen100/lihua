@@ -80,3 +80,46 @@ blockquote {
     background-color: #e8f3ff !important;
     border-radius: 4px;
   }
+
+
+  /* 无序选择器更具体，避免被覆盖 */
+  code {
+    display: inline;
+    padding:;
+    font-family: monospace;
+    font-size: inherit; /* 继承父级大小 */
+    color: #52a7ff;
+    background-color: #e8f3ff;
+    border-radius: 4px;
+  }
+
+ul > li {
+  --color: #50bfff;
+  --hover-color: #4CAF50;
+  --size: 0.6em;
+  --spacing: 0.2em;
+  
+  position: relative;
+  list-style: none;
+  padding-left: calc(var(--spacing) + var(--size));
+  margin: 0.5em 0;
+}
+
+ul > li::before {
+  content: "";
+  position: absolute;
+  left: -0.5em;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: var(--size);
+  height: var(--size);
+  border: 1.5px solid var(--color);
+  transform-origin: center;
+  transition: all 0.4s ease;
+}
+
+ul > li:hover::before {
+  border-color: var(--hover-color);
+  border-radius: 50%;
+  transform: translateY(-50%) rotate(405deg);
+}

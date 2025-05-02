@@ -74,7 +74,7 @@ blockquote {
   /* 覆盖所有由反引号生成的 <code> 标签 */
   :not(pre) > code {
     display: inline;
-    padding: 0.2em 0.4em;
+    padding: ;
     font-family: monospace;
     color: #52a7ff !important;
     background-color: #e8f3ff !important;
